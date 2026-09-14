@@ -13,7 +13,7 @@ const HeroSection = () => {
           transition={{ duration: 0.4 }}
           className="mb-4 text-sm text-muted-foreground"
         >
-          University of Toronto Mississauga · CCIT &amp; TCS
+          University of Toronto Mississauga · TCS &amp; CCIT
         </motion.p>
 
         <motion.h1

@@ -20,7 +20,7 @@ const caseStudies: CaseStudy[] = [
     title: "My Code Club",
     meta: "Curriculum Developer & Junior Backend Developer · Jul 2026–Present",
     description:
-      "Backend and curriculum work on a live learning platform — architecture contributions, payments debugging, and security hardening.",
+      "Backend architecture, Stripe payments, and Firestore security rules for a live parent and student registration platform.",
   },
   {
     title: "Campus Navigation System",
@@ -31,9 +31,9 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: "Turtle Island Charity",
-    meta: "CCT341 team project · Jul–Aug 2026",
+    meta: "CCT341 team project · May–Aug 2026",
     description:
-      "Consulting engagement focused on the client Services page and gallery — iteration, collaboration, and delivery with the project team.",
+      "Four-person consulting team. Owned the client Services page in Wix and contributed to the homepage gallery. Client site link pending team approval.",
   },
 ];
 

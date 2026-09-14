@@ -3,12 +3,13 @@ import { useRef } from "react";
 
 const experience = [
   { role: "Curriculum Developer & Junior Backend Developer", company: "My Code Club", period: "Jul 2026 – Present" },
-  { role: "Operations & Customer Experience Lead", company: "Riipen Labs — IlluminEd Tutoring Inc.", period: "Aug 2026" },
-  { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "Jul – Aug 2026" },
-  { role: "Internal Relations Executive", company: "UTMMSA", period: "Jul 2025 – Apr 2026" },
-  { role: "Technology Mentor", company: "Cyber Seniors", period: "Jul 2022 – Present" },
-  { role: "Manufacturing Operator", company: "Mondelēz International", period: "May – Aug 2024" },
-  { role: "Coding Instructor", company: "Code Ninjas", period: "May – Aug 2023" },
+  { role: "Operations & Customer Experience Lead", company: "IlluminEd Tutoring", period: "Aug 2026" },
+  { role: "Amazon Operational Strategy & People Analytics Externship", company: "Extern", period: "Jun – Aug 2026" },
+  { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "May – Aug 2026" },
+  { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 – Jun 2026" },
+  { role: "Manufacturer", company: "Mondelēz International", period: "May – Aug 2024" },
+  { role: "Coding Instructor", company: "Code Ninjas", period: "Jul – Aug 2023" },
+  { role: "Senior Mentor", company: "Cyber-Seniors", period: "Jun 2020 – Jun 2023" },
   { role: "Coding Tutor", company: "My Code Club", period: "May – Aug 2022" },
 ];
 
@@ -28,9 +29,9 @@ const AboutSection = () => {
             About
           </h2>
           <p className="mt-5 text-base leading-relaxed text-foreground/85">
-            I'm a student at the University of Toronto Mississauga, double-majoring in
+            I'm a BA Double Major student at the University of Toronto Mississauga in
             Technology, Coding &amp; Society (TCS) and Culture, Communication, Information
-            &amp; Technology (CCIT).
+            &amp; Technology (CCIT), expected Apr 2028.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             I'm passionate about building functional, well-designed digital experiences.
