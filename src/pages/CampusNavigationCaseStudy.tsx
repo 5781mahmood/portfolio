@@ -2,11 +2,10 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import projectCampus from "@/assets/project-campus.png";
 
-const TITLE = "Campus Navigation UX Case Study | Mahmood Sultan";
+const TITLE = "UTM Makerspace Access — UX Case Study | Mahmood Sultan";
 const DESCRIPTION =
-  "UX case study: a four-person team designing a wayfinding system for UTM — research, wireframes, 3D-printed prototyping, and a mobile prototype.";
+  "CCT204 case study: a four-person team researching why immigrant ICCIT students at UTM avoid the Library Makerspace — interview, observation, reframe, and a research poster.";
 const URL = "https://mahmoodsultan.com/projects/campus-navigation";
 const OG_IMAGE = "https://mahmoodsultan.com/og-campus-navigation.png";
 
@@ -84,12 +83,12 @@ const useDocumentMeta = () => {
     ld.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "Campus Navigation UX Case Study",
+      headline: "UTM Makerspace Access — UX Case Study",
       description: DESCRIPTION,
       author: { "@type": "Person", name: "Mahmood Sultan" },
       mainEntityOfPage: URL,
       url: URL,
-      datePublished: "2025-04-01",
+      datePublished: "2025-11-01",
     });
     head.appendChild(ld);
 
@@ -141,17 +140,22 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <section className="mb-16">
-    <p className="text-primary text-xs font-body tracking-[0.3em] uppercase mb-3">
-      {eyebrow}
-    </p>
-    <h2 className="font-display font-extrabold text-3xl md:text-4xl tracking-tight mb-6">
+  <section className="mb-14">
+    <p className="mb-2 text-sm font-medium tracking-wide text-primary">{eyebrow}</p>
+    <h2 className="mb-5 text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
       {title}
     </h2>
-    <div className="space-y-4 text-muted-foreground font-body text-lg leading-relaxed">
+    <div className="space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
       {children}
     </div>
   </section>
+);
+
+const ImageSlot = ({ label }: { label: string }) => (
+  <div className="mb-14 border border-dashed border-border bg-secondary/40 px-5 py-16 text-center">
+    <p className="text-sm font-medium text-foreground">{label}</p>
+    <p className="mt-2 text-sm text-muted-foreground">Image pending — send the file and it goes here.</p>
+  </div>
 );
 
 const CampusNavigationCaseStudy = () => {
@@ -159,169 +163,133 @@ const CampusNavigationCaseStudy = () => {
 
   return (
     <main className="min-h-screen bg-background">
-      <article className="max-w-3xl mx-auto px-6 md:px-8 py-16 md:py-24">
+      <article className="page-width px-5 py-16 md:px-10 md:py-24 lg:px-14">
         <Link
           to="/#work"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-12"
+          className="mb-12 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
-          <ArrowLeft className="w-4 h-4" />
-          Back to projects
+          <ArrowLeft className="h-4 w-4" />
+          Back to selected work
         </Link>
 
         <motion.header
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.45 }}
           className="mb-12"
         >
-          <p className="text-primary text-xs font-body tracking-[0.3em] uppercase mb-4">
-            UX Case Study · 2025
+          <p className="mb-3 text-sm font-medium tracking-wide text-primary">
+            CCT204 · UX research · Sep–Nov 2025
           </p>
-          <h1 className="font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-[1.05] mb-6">
-            Campus Navigation: A UX Case Study
+          <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl md:leading-[1.1]">
+            Why immigrant ICCIT students weren't using the UTM Makerspace
           </h1>
-          <p className="text-muted-foreground font-body text-lg md:text-xl leading-relaxed">
-            A four-person team project designing a wayfinding system for the
-            University of Toronto Mississauga — from field research to
-            interactive mobile prototype.
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            A four-person team project investigating access, confidence, and belonging
+            in the University of Toronto Mississauga Library Makerspace — not a campus
+            wayfinding system.
           </p>
         </motion.header>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border/50 bg-muted mb-16"
-        >
-          <img
-            src={projectCampus}
-            alt="Campus Navigation mobile prototype preview"
-            className="w-full h-full object-contain p-4"
-            width={1200}
-            height={900}
-          />
-        </motion.div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 pb-16 border-b border-border/50">
+        <div className="mb-14 grid grid-cols-2 gap-6 border-b border-border pb-12 md:grid-cols-4">
           {[
-            { label: "Role", value: "UX Researcher & Designer" },
-            { label: "Timeline", value: "Sep–Nov 2025" },
+            { label: "Role", value: "UX research & interview lead" },
+            { label: "Course", value: "CCT204" },
             { label: "Team", value: "4-person student team" },
-            { label: "Tools", value: "Figma, 3D Print, Laser Cut" },
+            { label: "Outcome", value: "36×48″ research poster" },
           ].map((item) => (
             <div key={item.label}>
-              <p className="text-xs font-body tracking-[0.2em] uppercase text-primary mb-2">
+              <p className="mb-1 text-xs font-medium uppercase tracking-wide text-muted-foreground">
                 {item.label}
               </p>
-              <p className="font-display font-semibold text-sm md:text-base">
-                {item.value}
-              </p>
+              <p className="text-sm font-medium text-foreground">{item.value}</p>
             </div>
           ))}
         </div>
 
-        <Section eyebrow="01 — The Problem" title="Finding your way on a sprawling campus">
+        <Section eyebrow="01 — Problem" title="A space that existed, and students who didn't enter it">
           <p>
-            New students, visitors, and even returning members of the University
-            of Toronto Mississauga community routinely struggle to find their
-            way between buildings, lecture halls, and shared spaces. Existing
-            campus maps are static, dense with information, and rarely match the
-            mental model of someone standing at a fork in the path with minutes
-            to spare before class.
+            The UTM Library Makerspace is open to students across campus, including
+            ICCIT students in programs like CCIT and TCS. In practice, many second- and
+            third-year immigrant ICCIT students rarely used it unless a course forced
+            them inside. From the outside, that looked like disinterest. Our team
+            treated it as a research question instead: what actually kept people out?
           </p>
           <p>
-            Our team set out to redesign the wayfinding experience from the
-            ground up — starting with how people actually move through campus,
-            not the map artifacts they're handed at orientation.
-          </p>
-        </Section>
-
-        <Section eyebrow="02 — User Research" title="Talking to people on the path">
-          <p>
-            We conducted semi-structured user interviews with first-year
-            students, transfer students, and campus visitors, paired with
-            on-site shadowing early in the term. A few insights shaped the rest
-            of the project:
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>
-              People decide where to turn at landmarks, not at coordinates.
-            </li>
-            <li>
-              Building codes (DH, IB, MN) mean nothing to a newcomer holding a
-              printed schedule.
-            </li>
-            <li>
-              Time-to-arrival matters more than distance, especially across the
-              hilly north end of campus.
-            </li>
-          </ul>
-        </Section>
-
-        <Section eyebrow="03 — Wireframing" title="From paper sketches to Figma flows">
-          <p>
-            We started with low-fidelity paper sketches focused on one job:
-            "Get me to my next class on time." Early prototypes prioritized a
-            single primary action — a search bar that accepted either a course
-            code or a building name — over the cluttered "everything map"
-            pattern of the existing tool.
-          </p>
-          <p>
-            Mid-fidelity Figma wireframes added turn-by-turn cards, landmark
-            cues ("turn right at the Davis Building atrium"), and an estimated
-            walking time that adjusted for elevation. We iterated through
-            several rounds of internal critique before testing.
+            The working question became: how might we make the makerspace easier to
+            understand, and help new and immigrant ICCIT students feel connected,
+            supported, and confident the first time they use it?
           </p>
         </Section>
 
-        <Section eyebrow="04 — Physical Prototyping" title="3D printing the campus, literally">
+        <Section eyebrow="02 — Research" title="Interview and observation">
           <p>
-            To pressure-test our wayfinding model against the real campus, we
-            laser-cut a topographic base of the UTM grounds and 3D-printed
-            scaled building volumes. Participants in our usability sessions
-            could trace a route with their finger while we observed which
-            landmarks they actually used to orient themselves — and which ones
-            the digital prototype was missing.
+            I personally ran a semi-structured interview with a second-year student
+            about how they approached campus spaces, booking, and group work. The rest
+            of the team observed real makerspace usage and spoke with the makerspace
+            instructor. Together, that mix of interview, observation, and staff
+            conversation became the evidence base for the project.
+          </p>
+          <p>
+            What showed up was not a lack of curiosity. Students described unclear
+            booking and access, a space that felt crowded or already claimed by people
+            who knew what they were doing, and a sense that the room belonged to other
+            programs. Some walked past without entering. Others only went when coursework
+            required it, then left once the task was done.
           </p>
         </Section>
 
-        <Section eyebrow="05 — Final Prototype" title="A mobile-first wayfinding companion">
+        <ImageSlot label="Empathy map" />
+
+        <Section eyebrow="03 — The reframe" title="Confidence, information, and social connection">
           <p>
-            The final interactive Figma prototype focused on a small set of
-            screens: a search-first home, a turn-by-turn route view anchored to
-            landmarks rather than street names, and a "you've arrived"
-            confirmation that doubled as a room-level guide for unfamiliar
-            buildings.
+            The research reframed the problem. Students were not avoiding the makerspace
+            because they did not care about making. They lacked confidence, clear
+            information, and social connections that would make participation feel
+            legitimate. Feeling like an outsider — unsure what was allowed, unsure who
+            to ask, unsure whether the space was "for people like me" — mattered more
+            than machine availability.
           </p>
           <p>
-            In post-test sessions, most participants completed a cold-start
-            "find this lecture hall" task noticeably faster than with the
-            existing campus map, and described the landmark-based directions as
-            easier to trust when they were unsure of their location.
+            That shift mattered for the design response. A better map of the room would
+            not have solved the real barrier. The work had to address onboarding,
+            belonging, and a first successful visit.
           </p>
         </Section>
 
-        <Section eyebrow="06 — What I Learned" title="Reflections on the process">
+        <Section eyebrow="04 — Proposed direction" title="Workshops, clearer onboarding, shared interests">
           <p>
-            Wayfinding is a problem about people, not maps. Every research
-            session reinforced that confidence — knowing you're on the right
-            path — matters more than raw accuracy. The biggest design wins
-            came from removing information, not adding it.
+            The team's proposed direction followed the reframe: structured workshops so
+            students had a reason and a cohort for a first visit; clearer onboarding so
+            booking and basic use were not guesswork; and a way for students with shared
+            interests — including ICCIT-relevant skills like video and photo work — to
+            find each other instead of walking into a room of strangers.
           </p>
           <p>
-            If I were to take this project further, I'd invest in indoor
-            positioning for the largest buildings and explore a community-edited
-            landmark layer so the system stays accurate as the campus evolves.
+            The point was not to add more equipment. It was to lower the social and
+            informational cost of showing up.
           </p>
         </Section>
 
-        <div className="pt-12 border-t border-border/50">
+        <Section eyebrow="05 — Poster / outcome" title="A 36×48″ research poster">
+          <p>
+            The project culminated in a 36×48″ research poster that documented the
+            problem, methods, reframe, and proposed direction for the course. The poster
+            was the deliverable that held the argument together: access is not only about
+            open hours and machines — it is about whether students believe they belong
+            there.
+          </p>
+        </Section>
+
+        <ImageSlot label="Final research poster (36×48″)" />
+
+        <div className="border-t border-border pt-10">
           <Link
             to="/#work"
-            className="inline-flex items-center gap-2 text-sm font-display font-semibold uppercase tracking-wider text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            <ArrowLeft className="w-4 h-4" />
-            See more projects
+            <ArrowLeft className="h-4 w-4" />
+            Back to selected work
           </Link>
         </div>
       </article>

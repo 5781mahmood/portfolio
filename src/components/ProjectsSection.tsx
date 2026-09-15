@@ -23,10 +23,10 @@ const caseStudies: CaseStudy[] = [
       "Backend architecture, Stripe payments, and Firestore security rules for a live parent and student registration platform.",
   },
   {
-    title: "Campus Navigation System",
-    meta: "4-person team UX project · Sep–Nov 2025",
+    title: "UTM Makerspace Access",
+    meta: "CCT204 · 4-person team UX research · Sep–Nov 2025",
     description:
-      "Team project designing a wayfinding system for UTM — user interviews and research, wireframes in Figma, and physical prototypes built with 3D printing and laser cutting.",
+      "Researched why immigrant ICCIT students at UTM avoided the Library Makerspace. Interview and observation reframed the barrier as confidence, information, and belonging — not disinterest.",
     href: "/projects/campus-navigation",
   },
   {
