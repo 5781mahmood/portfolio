@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    /* Warm paper + deep amber — technical, not flashy */
-    --background: 40 20% 98%;
-    --foreground: 30 10% 12%;
+    /* Warm paper field + iron-oxide amber — technical, not flashy */
+    --background: 36 28% 97%;
+    --foreground: 24 18% 10%;
 
-    --card: 40 25% 99%;
-    --card-foreground: 30 10% 12%;
+    --card: 36 30% 99%;
+    --card-foreground: 24 18% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 10% 12%;
+    --popover-foreground: 24 18% 10%;
 
-    --primary: 28 72% 36%;
-    --primary-foreground: 40 20% 98%;
+    --primary: 22 78% 34%;
+    --primary-foreground: 36 28% 97%;
 
-    --secondary: 36 14% 93%;
-    --secondary-foreground: 30 10% 18%;
+    --secondary: 34 16% 92%;
+    --secondary-foreground: 24 14% 18%;
 
-    --muted: 36 12% 93%;
-    --muted-foreground: 30 6% 38%;
+    --muted: 34 14% 92%;
+    --muted-foreground: 24 8% 36%;
 
-    --accent: 32 40% 92%;
-    --accent-foreground: 28 72% 28%;
+    --accent: 28 42% 90%;
+    --accent-foreground: 22 78% 26%;
 
     --destructive: 0 72% 46%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 32 10% 84%;
-    --input: 32 10% 84%;
-    --ring: 28 72% 36%;
+    --border: 30 12% 84%;
+    --input: 30 12% 84%;
+    --ring: 22 78% 34%;
 
     --radius: 0.125rem;
 
-    --font-display: "Source Sans 3", "Helvetica Neue", sans-serif;
+    --font-display: "Source Serif 4", "Times New Roman", serif;
     --font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
 
-    --sidebar-background: 40 20% 98%;
-    --sidebar-foreground: 30 10% 12%;
-    --sidebar-primary: 28 72% 36%;
-    --sidebar-primary-foreground: 40 20% 98%;
-    --sidebar-accent: 36 14% 93%;
-    --sidebar-accent-foreground: 30 10% 12%;
-    --sidebar-border: 32 10% 84%;
-    --sidebar-ring: 28 72% 36%;
+    --sidebar-background: 36 28% 97%;
+    --sidebar-foreground: 24 18% 10%;
+    --sidebar-primary: 22 78% 34%;
+    --sidebar-primary-foreground: 36 28% 97%;
+    --sidebar-accent: 34 16% 92%;
+    --sidebar-accent-foreground: 24 18% 10%;
+    --sidebar-border: 30 12% 84%;
+    --sidebar-ring: 22 78% 34%;
   }
 }
 
@@ -58,6 +58,10 @@
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
     overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse 90% 55% at 100% -10%, hsl(28 55% 88% / 0.55), transparent 55%),
+      radial-gradient(ellipse 70% 45% at -5% 105%, hsl(34 20% 90% / 0.7), transparent 50%);
+    background-attachment: fixed;
   }
 
   h1,
@@ -70,8 +74,8 @@
   }
 
   ::selection {
-    background: hsl(28 72% 36% / 0.18);
-    color: hsl(30 10% 12%);
+    background: hsl(22 78% 34% / 0.18);
+    color: hsl(24 18% 10%);
   }
 }
 
@@ -83,6 +87,14 @@
   .page-width {
     @apply mx-auto w-full max-w-3xl;
   }
+
+  .page-width-wide {
+    @apply mx-auto w-full max-w-4xl;
+  }
+
+  .eyebrow {
+    @apply text-sm font-medium tracking-[0.08em] uppercase text-primary;
+  }
 }
 
 html {
@@ -93,11 +105,11 @@ html {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(40 20% 98%);
+  background: hsl(36 28% 97%);
 }
 ::-webkit-scrollbar-thumb {
-  background: hsl(32 10% 72%);
+  background: hsl(30 12% 70%);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(28 72% 36% / 0.55);
+  background: hsl(22 78% 34% / 0.55);
 }

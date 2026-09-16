@@ -19,18 +19,19 @@ const ContactSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-            Contact
+          <p className="eyebrow mb-3">Contact</p>
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            Let's talk
           </h2>
           <p className="mt-3 max-w-md text-base text-muted-foreground">
-            Have a question or want to work together? Drop me a message — or email{" "}
+            Open to 2027 co-op and internship conversations. Email{" "}
             <a
               href="mailto:5781mahmood@gmail.com"
               className="text-foreground underline underline-offset-2 hover:text-primary"
             >
               5781mahmood@gmail.com
-            </a>
-            .
+            </a>{" "}
+            or use the form below.
           </p>
         </motion.div>
 
@@ -48,7 +49,7 @@ const ContactSection = () => {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+              className="w-full border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
             />
           </label>
           <label className="block">
@@ -58,7 +59,7 @@ const ContactSection = () => {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+              className="w-full border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
             />
           </label>
           <label className="block">
@@ -68,12 +69,12 @@ const ContactSection = () => {
               rows={5}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full resize-y border border-border bg-background px-3 py-2 text-sm outline-none focus:border-primary"
+              className="w-full resize-y border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
             />
           </label>
           <button
             type="submit"
-            className="bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
           >
             Send message
           </button>

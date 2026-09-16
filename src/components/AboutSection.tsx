@@ -25,18 +25,29 @@ const AboutSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-            About
+          <p className="eyebrow mb-3">About</p>
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            Background
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-foreground/85">
-            I'm a BA Double Major student at the University of Toronto Mississauga in
-            Technology, Coding &amp; Society (TCS) and Culture, Communication, Information
-            &amp; Technology (CCIT), expected Apr 2028.
+          <p className="mt-5 text-base leading-relaxed text-foreground/85 md:text-lg">
+            BA Double Major at the University of Toronto Mississauga in Technology,
+            Coding &amp; Society (TCS) and Culture, Communication, Information &amp;
+            Technology (CCIT), expected Apr 2028.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            I'm passionate about building functional, well-designed digital experiences.
-            From UX research and prototyping to coding full applications, I bridge the gap
-            between design thinking and technical execution.
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            Currently the backend developer behind My Code Club's registration and
+            payments platform, building on an existing system with Firebase Cloud
+            Functions, Stripe integration, and Firestore security rules. This work
+            continues into the school year alongside curriculum and teaching
+            responsibilities.
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+            Beyond MCC, I've done client-facing web implementation (Turtle Island
+            Charity), a Python/Pandas analysis of Toronto public safety data, and a
+            customer experience consulting project for a tutoring company. I like
+            projects where I can move between the technical and the practical —
+            understanding both how something is built and why it matters to the person
+            using it.
           </p>
         </motion.div>
 
@@ -44,12 +55,10 @@ const AboutSection = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, delay: 0.08 }}
-          className="mt-12"
+          className="mt-14"
         >
-          <h3 className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
-            Experience
-          </h3>
-          <ul className="mt-4 divide-y divide-border border-y border-border">
+          <h3 className="eyebrow">Experience</h3>
+          <ul className="mt-5 divide-y divide-border border-y border-border">
             {experience.map((item) => (
               <li
                 key={`${item.role}-${item.company}-${item.period}`}
@@ -59,7 +68,9 @@ const AboutSection = () => {
                   <p className="font-medium text-foreground">{item.role}</p>
                   <p className="text-sm text-muted-foreground">{item.company}</p>
                 </div>
-                <p className="shrink-0 text-sm text-muted-foreground">{item.period}</p>
+                <p className="shrink-0 font-body text-sm tabular-nums text-muted-foreground">
+                  {item.period}
+                </p>
               </li>
             ))}
           </ul>

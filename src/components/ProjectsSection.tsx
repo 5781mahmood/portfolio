@@ -39,16 +39,22 @@ const caseStudies: CaseStudy[] = [
 
 const otherProjects: OtherProject[] = [
   {
+    title: "Toronto Firearm Incident Analysis",
+    meta: "CCT416 · Python & Pandas · Winter 2026",
+    description:
+      "Cleaned and analyzed a public safety dataset, engineered harm metrics beyond raw counts, and built visualizations for a research report and group presentation.",
+  },
+  {
     title: "Calorie Tracking App",
     meta: "Python Desktop Application · 2024–25",
     description:
-      "Full-featured desktop app for tracking meals, calories, and nutrition data with database storage, data visualization charts, and visual progress tracking.",
+      "Desktop app for logging meals, categorizing food, calculating daily totals, and saving progress across sessions.",
   },
   {
     title: "100-Level Platformer",
     meta: "Python Game Development · 2024",
     description:
-      "Custom-designed platformer game with 100 unique levels, custom sprites and pixel art, player physics, collision detection, and level progression.",
+      "Platformer with 100 unique levels, custom sprites and pixel art, player physics, collision detection, and level progression.",
   },
 ];
 
@@ -64,38 +70,44 @@ const ProjectsSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4 }}
         >
-          <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-            Selected work
+          <p className="eyebrow mb-3">Selected work</p>
+          <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+            Case studies
           </h2>
           <p className="mt-3 max-w-xl text-base text-muted-foreground">
-            Three case studies. Full write-ups for MCC and Turtle Island are next; Campus
-            Navigation is live.
+            Three projects that show research, shipping, and client work. The makerspace
+            write-up is live; MCC and Turtle Island are next.
           </p>
         </motion.div>
 
-        <ul className="mt-10 divide-y divide-border border-y border-border">
+        <ul className="mt-12 divide-y divide-border border-y border-border">
           {caseStudies.map((project, index) => {
             const body = (
-              <>
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
-                  <h3 className="text-lg font-semibold tracking-tight text-foreground">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{project.meta}</p>
+              <div className="flex gap-5 md:gap-8">
+                <span className="shrink-0 pt-0.5 font-body text-sm tabular-nums text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-foreground md:text-2xl">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">{project.meta}</p>
+                  </div>
+                  <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  {project.href ? (
+                    <span className="mt-3 inline-block text-sm font-medium text-primary">
+                      Read case study →
+                    </span>
+                  ) : (
+                    <span className="mt-3 inline-block text-sm text-muted-foreground">
+                      Case study coming next
+                    </span>
+                  )}
                 </div>
-                <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
-                {project.href ? (
-                  <span className="mt-3 inline-block text-sm font-medium text-primary">
-                    Read case study →
-                  </span>
-                ) : (
-                  <span className="mt-3 inline-block text-sm text-muted-foreground">
-                    Case study coming next
-                  </span>
-                )}
-              </>
+              </div>
             );
 
             return (
@@ -106,28 +118,30 @@ const ProjectsSection = () => {
                 transition={{ duration: 0.35, delay: 0.06 * index }}
               >
                 {project.href ? (
-                  <Link to={project.href} className="block py-6 transition-opacity hover:opacity-80">
+                  <Link
+                    to={project.href}
+                    className="block py-7 transition-colors hover:bg-secondary/50 md:-mx-3 md:px-3"
+                  >
                     {body}
                   </Link>
                 ) : (
-                  <div className="py-6">{body}</div>
+                  <div className="py-7 md:-mx-3 md:px-3">{body}</div>
                 )}
               </motion.li>
             );
           })}
         </ul>
 
-        <div className="mt-14">
-          <h3 className="text-lg font-semibold tracking-tight text-foreground">Other projects</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Shorter builds. CCT416 will be added once its description is ready.
-          </p>
-          <ul className="mt-6 space-y-6">
+        <div className="mt-16">
+          <h3 className="font-display text-xl font-semibold tracking-tight text-foreground">
+            Other projects
+          </h3>
+          <ul className="mt-6 space-y-7">
             {otherProjects.map((project) => (
-              <li key={project.title}>
+              <li key={project.title} className="max-w-xl">
                 <p className="font-medium text-foreground">{project.title}</p>
                 <p className="mt-0.5 text-sm text-muted-foreground">{project.meta}</p>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
               </li>

@@ -8,6 +8,6 @@ Mahmood Sultan is a student developer and designer based in Toronto. This portfo
 
 - [Home](/): Hero introduction to Mahmood Sultan.
 - [About](/#about): Background, education, and experience.
-- [Selected work](/#work): Case studies for My Code Club, UTM Makerspace Access (CCT204, 4-person team), and Turtle Island Charity, plus shorter projects including the Calorie Tracking App and 100-Level Platformer Game.
+- [Selected work](/#work): Case studies for My Code Club, UTM Makerspace Access (CCT204, 4-person team), and Turtle Island Charity, plus shorter projects including Toronto Firearm Incident Analysis (CCT416), the Calorie Tracking App, and 100-Level Platformer Game.
 - [UTM Makerspace Access](/projects/campus-navigation): UX research case study on why immigrant ICCIT students avoided the Library Makerspace.
 - [Contact](/#contact): Get in touch with Mahmood.

@@ -31,7 +31,7 @@ const Navbar = () => {
         }`}
       >
         <div className="page-width flex h-14 items-center justify-between">
-          <a href="#hero" className="text-[15px] font-semibold tracking-tight text-foreground">
+          <a href="#hero" className="font-display text-[15px] font-semibold tracking-tight text-foreground">
             Mahmood Sultan
           </a>
 

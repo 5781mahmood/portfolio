@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Source Sans 3", "Helvetica Neue", "sans-serif"],
+        display: ["Source Serif 4", "Times New Roman", "serif"],
         body: ["Source Sans 3", "Helvetica Neue", "sans-serif"],
       },
       colors: {
