@@ -1,13 +1,33 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const experience = [
-  { role: "Curriculum Developer & Junior Backend Developer", company: "My Code Club", period: "Jul 2026 – Present" },
+type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  detail?: string;
+};
+
+const experience: ExperienceItem[] = [
+  {
+    role: "Web App QA Tester",
+    company: "Agrivanna",
+    period: "Oct – Nov 2026",
+    detail:
+      "Filed 38 GitHub issues; 24 fixes confirmed in my retests. Wrote 5 Playwright smoke tests and ran an accessibility and Lighthouse audit.",
+  },
+  {
+    role: "Backend Developer & Curriculum Developer",
+    company: "My Code Club",
+    period: "Jul – Nov 2026",
+    detail:
+      "Owned the backend of an existing registration platform: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API.",
+  },
   { role: "Operations & Customer Experience Lead", company: "IlluminEd Tutoring", period: "Aug 2026" },
   { role: "Amazon Operational Strategy & People Analytics Externship", company: "Extern", period: "Jun – Aug 2026" },
   { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "May – Aug 2026" },
   { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 – Jun 2026" },
-  { role: "Manufacturer", company: "Mondelēz International", period: "May – Aug 2024" },
+  { role: "Manufacturing Operator", company: "Mondelēz International", period: "May – Aug 2024" },
   { role: "Coding Instructor", company: "Code Ninjas", period: "Jul – Aug 2023" },
   { role: "Senior Mentor", company: "Cyber-Seniors", period: "Jun 2020 – Jun 2023" },
   { role: "Coding Tutor", company: "My Code Club", period: "May – Aug 2022" },
@@ -30,21 +50,22 @@ const AboutSection = () => {
             Background
           </h2>
           <p className="mt-5 text-base leading-relaxed text-foreground/85 md:text-lg">
-            BA Double Major at the University of Toronto Mississauga in Technology,
-            Coding &amp; Society (TCS) and Culture, Communication, Information &amp;
-            Technology (CCIT), expected Apr 2028.
+            BA at the University of Toronto Mississauga in Technology, Coding &amp;
+            Society (TCS) and Culture, Communication, Information &amp; Technology
+            (CCIT), with a Statistics minor. Expected graduation Apr 2029. Seeking a
+            12–16 month co-op starting May 2027.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Currently the backend developer behind My Code Club's registration and
-            payments platform, building on an existing system with Firebase Cloud
-            Functions, Stripe integration, and Firestore security rules. This work
-            continues into the school year alongside curriculum and teaching
-            responsibilities.
+            At My Code Club (Jul – Nov 2026) I joined an existing platform and owned
+            the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email
+            API. Built with Cursor; I owned requirements, review, testing and
+            deployment. The platform has 100+ registered families and a newsletter
+            reach of about 500. After that I did QA testing on Agrivanna's web app.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Beyond MCC, I've done client-facing web implementation (Turtle Island
-            Charity), a Python/Pandas analysis of Toronto public safety data, and a
-            customer experience consulting project for a tutoring company. I like
+            I've also built OurCal, a tested React and Supabase app used by 40+
+            people, done client web implementation for Turtle Island Charity, and
+            analyzed Toronto firearm incident data with Python and DuckDB SQL. I like
             projects where I can move between the technical and the practical —
             understanding both how something is built and why it matters to the person
             using it.
@@ -64,9 +85,14 @@ const AboutSection = () => {
                 key={`${item.role}-${item.company}-${item.period}`}
                 className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
               >
-                <div>
+                <div className="max-w-lg">
                   <p className="font-medium text-foreground">{item.role}</p>
                   <p className="text-sm text-muted-foreground">{item.company}</p>
+                  {item.detail ? (
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                      {item.detail}
+                    </p>
+                  ) : null}
                 </div>
                 <p className="shrink-0 font-body text-sm tabular-nums text-muted-foreground">
                   {item.period}

@@ -6,6 +6,11 @@ const navLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+const profileLinks = [
+  { label: "GitHub", href: "https://github.com/5781mahmood" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/mahmoodsultan5/" },
+];
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,7 +31,7 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${
+        className={`fixed inset-x-0 top-0 z-50 px-5 transition-colors duration-200 md:px-10 lg:px-14 ${
           scrolled ? "border-b border-border bg-background" : "bg-background/0"
         }`}
       >
@@ -40,6 +45,18 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
+                className="text-[15px] text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+            <span className="h-4 w-px bg-border" aria-hidden />
+            {profileLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[15px] text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
@@ -87,6 +104,19 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <div className="mt-6 flex gap-6 border-t border-border pt-6">
+            {profileLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-muted-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       ) : null}
     </>

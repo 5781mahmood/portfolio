@@ -8,7 +8,9 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:5781mahmood@gmail.com?subject=Portfolio Contact from ${formData.name}&body=${formData.message}%0A%0AFrom: ${formData.email}`;
+    const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.email}`);
+    window.location.href = `mailto:5781mahmood@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -24,7 +26,7 @@ const ContactSection = () => {
             Let's talk
           </h2>
           <p className="mt-3 max-w-md text-base text-muted-foreground">
-            Open to 2027 co-op and internship conversations. Email{" "}
+            Seeking a 12–16 month co-op starting May 2027. Email{" "}
             <a
               href="mailto:5781mahmood@gmail.com"
               className="text-foreground underline underline-offset-2 hover:text-primary"

@@ -6,8 +6,8 @@ import { ArrowLeft } from "lucide-react";
 const TITLE = "Build a UX Portfolio With No Experience | Mahmood Sultan";
 const DESCRIPTION =
   "A practical guide to building a UX design portfolio with no experience — use conceptual projects, volunteer work, and process docs to land your first role.";
-const URL = "https://mahmoodsultan.lovable.app/blog/ux-portfolio-no-experience";
-const OG_IMAGE = "https://mahmoodsultan.lovable.app/favicon.png";
+const URL = "https://www.mahmoodsultan.com/blog/ux-portfolio-no-experience";
+const OG_IMAGE = "https://www.mahmoodsultan.com/og-image.png";
 
 const useDocumentMeta = () => {
   useEffect(() => {

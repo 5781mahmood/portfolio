@@ -1,76 +1,51 @@
-# Welcome to your Lovable project
+# mahmoodsultan.com
 
-## Project info
+Personal portfolio of Mahmood Sultan, a third-year Technology, Coding & Society + CCIT student at the University of Toronto Mississauga. It has an about/experience section, selected work, and a case study on the UTM Makerspace research project.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Live at [www.mahmoodsultan.com](https://www.mahmoodsultan.com).
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+- Vite + React 18 + TypeScript
+- Tailwind CSS and a few shadcn/ui primitives
+- React Router for client-side routes
+- Framer Motion for small entrance animations
+- Deployed on Vercel from `main`; `vercel.json` sends every route to `index.html` so deep links work on refresh
 
-**Use Lovable**
+## Run locally
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node 18+.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/5781mahmood/portfolio-v2.git
+cd portfolio-v2
+npm install
+cp .env.example .env   # optional; no page currently reads these values
+npm run dev            # http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+Other scripts:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build     # production build into dist/
+npm run preview   # serve the production build
+npm run lint
+npm test
+```
 
-**Use GitHub Codespaces**
+## Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `src/pages/` — home page, the Makerspace case study, blog guides, 404
+- `src/components/` — home page sections (hero, work, about, contact, footer)
+- `public/` — favicon, Open Graph image, `robots.txt`, `sitemap.xml`, `llms.txt`
 
-## What technologies are used for this project?
+## Open Graph image
 
-This project is built with:
+`public/og-image.png` (1200×630) is rendered from `scripts/og-image.html`:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-# NewPortfolio
-# NewPortfolio
-# portfolio-v2
+```sh
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+  --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=5000 \
+  --window-size=1200,630 --screenshot="$PWD/public/og-image.png" \
+  "file://$PWD/scripts/og-image.html"
+```

@@ -34,9 +34,9 @@ const HeroSection = () => {
           transition={{ duration: 0.45, delay: 0.12 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl"
         >
-          Backend work on a live registration platform, client web implementation,
-          and UX research on campus access. Third-year BA Double Major, open to
-          2027 co-op and internships in full-stack or product/UX.
+          Backend for a live registration and payments platform, QA testing on
+          Agrivanna's web app, and OurCal, a tested React app used by 40+ people.
+          Third-year at UTM, seeking a 12–16 month co-op from May 2027.
         </motion.p>
 
         <motion.div

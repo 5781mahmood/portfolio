@@ -6,8 +6,8 @@ import { ArrowLeft } from "lucide-react";
 const TITLE = "Design Thinking Guide for UX Designers | Mahmood Sultan";
 const DESCRIPTION =
   "A practical design thinking guide covering the five stages — empathize, define, ideate, prototype, test — and how to apply them to real UX design projects.";
-const URL = "https://mahmoodsultan.lovable.app/blog/design-thinking-guide";
-const OG_IMAGE = "https://mahmoodsultan.lovable.app/favicon.png";
+const URL = "https://www.mahmoodsultan.com/blog/design-thinking-guide";
+const OG_IMAGE = "https://www.mahmoodsultan.com/og-image.png";
 
 const useDocumentMeta = () => {
   useEffect(() => {
@@ -234,15 +234,17 @@ const DesignThinkingGuide = () => {
 
         <Section eyebrow="06 — Apply" title="Running design thinking on a UX project">
           <p>
-            Here is how the five stages map to a typical UX case study, like the campus navigation
-            project on this portfolio:
+            Here is how the early stages played out in the{" "}
+            <Link to="/projects/utm-makerspace" className="text-primary underline underline-offset-4">
+              UTM Makerspace research study
+            </Link>{" "}
+            on this portfolio, a four-person project on why immigrant ICCIT students didn't use the
+            library makerspace:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Empathize:</strong> interview students who get lost on campus.</li>
-            <li><strong>Define:</strong> frame the problem around wayfinding stress and missed appointments.</li>
-            <li><strong>Ideate:</strong> brainstorm map views, AR markers, and real-time shuttle tracking.</li>
-            <li><strong>Prototype:</strong> build clickable wireframes of the most promising flow.</li>
-            <li><strong>Test:</strong> run usability sessions and refine the navigation hierarchy.</li>
+            <li><strong>Empathize:</strong> a semi-structured student interview, observation of real makerspace use, and a conversation with the makerspace instructor.</li>
+            <li><strong>Define:</strong> reframe the problem from "students aren't interested" to a lack of confidence, clear information, and social connection.</li>
+            <li><strong>Ideate:</strong> directions that lower the cost of a first visit, such as structured workshops, clearer onboarding, and ways for students with shared interests to find each other.</li>
           </ul>
           <p>
             Document each stage in your portfolio. Hiring managers want to see how you think, not just

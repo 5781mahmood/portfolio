@@ -8,8 +8,8 @@ import poster from "@/assets/makerspace-poster.png";
 const TITLE = "UTM Makerspace Access — UX Case Study | Mahmood Sultan";
 const DESCRIPTION =
   "CCT204 case study: a four-person team researching why immigrant ICCIT students at UTM avoid the Library Makerspace — interview, observation, reframe, and a research poster.";
-const URL = "https://mahmoodsultan.com/projects/campus-navigation";
-const OG_IMAGE = "https://mahmoodsultan.com/og-campus-navigation.png";
+const URL = "https://www.mahmoodsultan.com/projects/utm-makerspace";
+const OG_IMAGE = "https://www.mahmoodsultan.com/og-image.png";
 
 const useDocumentMeta = () => {
   useEffect(() => {
@@ -171,7 +171,7 @@ const Figure = ({
   </figure>
 );
 
-const CampusNavigationCaseStudy = () => {
+const MakerspaceCaseStudy = () => {
   useDocumentMeta();
 
   return (
@@ -201,9 +201,8 @@ const CampusNavigationCaseStudy = () => {
             Why immigrant ICCIT students weren't using the UTM Makerspace
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            A four-person team project on access, confidence, and belonging in the
-            University of Toronto Mississauga Library Makerspace — not a campus
-            wayfinding system.
+            A four-person UX research study into why immigrant ICCIT students
+            didn't use the University of Toronto Mississauga Library Makerspace.
           </p>
         </motion.header>
 
@@ -325,4 +324,4 @@ const CampusNavigationCaseStudy = () => {
   );
 };
 
-export default CampusNavigationCaseStudy;
+export default MakerspaceCaseStudy;

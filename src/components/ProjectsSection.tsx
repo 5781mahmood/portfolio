@@ -13,21 +13,22 @@ type OtherProject = {
   title: string;
   meta: string;
   description: string;
+  links?: { label: string; href: string }[];
 };
 
 const caseStudies: CaseStudy[] = [
   {
     title: "My Code Club",
-    meta: "Curriculum Developer & Junior Backend Developer · Jul 2026–Present",
+    meta: "Backend Developer & Curriculum Developer · Jul–Nov 2026",
     description:
-      "Backend architecture, Stripe payments, and Firestore security rules for a live parent and student registration platform.",
+      "Joined an existing parent and student registration platform and owned the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API. Built with Cursor; I owned requirements, review, testing and deployment. 100+ registered families.",
   },
   {
     title: "UTM Makerspace Access",
     meta: "CCT204 · 4-person team UX research · Sep–Nov 2025",
     description:
       "Researched why immigrant ICCIT students at UTM avoided the Library Makerspace. Interview and observation reframed the barrier as confidence, information, and belonging — not disinterest.",
-    href: "/projects/campus-navigation",
+    href: "/projects/utm-makerspace",
   },
   {
     title: "Turtle Island Charity",
@@ -39,10 +40,23 @@ const caseStudies: CaseStudy[] = [
 
 const otherProjects: OtherProject[] = [
   {
-    title: "Toronto Firearm Incident Analysis",
-    meta: "CCT416 · Python & Pandas · Winter 2026",
+    title: "OurCal",
+    meta: "React 19 · TypeScript · Vite · Supabase",
     description:
-      "Cleaned and analyzed a public safety dataset, engineered harm metrics beyond raw counts, and built visualizations for a research report and group presentation.",
+      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 52 automated tests (12 Vitest + 40 Playwright) run in GitHub Actions.",
+    links: [
+      { label: "Live app", href: "https://ourcal-pi.vercel.app" },
+      { label: "GitHub", href: "https://github.com/5781mahmood/OurCal" },
+    ],
+  },
+  {
+    title: "Toronto Firearm Analysis",
+    meta: "CCT416 · Python, Pandas, DuckDB SQL · May–Jun 2026",
+    description:
+      "Toronto Police open data: do the neighbourhoods with the most firearm incidents also carry the most harm? Cleaned the data in Pandas, cross-checked results in DuckDB SQL, and built visualizations for a report and presentation.",
+    links: [
+      { label: "GitHub", href: "https://github.com/5781mahmood/cct416-firearm-analysis" },
+    ],
   },
   {
     title: "Calorie Tracking App",
@@ -144,6 +158,22 @@ const ProjectsSection = () => {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
+                {project.links ? (
+                  <p className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium text-primary underline-offset-4 hover:underline"
+                      >
+                        {link.label}
+                        <span className="sr-only"> for {project.title} (opens in a new tab)</span>
+                      </a>
+                    ))}
+                  </p>
+                ) : null}
               </li>
             ))}
           </ul>

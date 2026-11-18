@@ -6,8 +6,8 @@ import { ArrowLeft, Download } from "lucide-react";
 const TITLE = "UX Designer Resume Guide | Mahmood Sultan";
 const DESCRIPTION =
   "A practical UX designer resume guide: ATS optimization, keyword strategy from real job descriptions, portfolio pairing, and a free downloadable template.";
-const URL = "https://mahmoodsultan.lovable.app/blog/ux-designer-resume-guide";
-const OG_IMAGE = "https://mahmoodsultan.lovable.app/favicon.png";
+const URL = "https://www.mahmoodsultan.com/blog/ux-designer-resume-guide";
+const OG_IMAGE = "https://www.mahmoodsultan.com/og-image.png";
 
 const useDocumentMeta = () => {
   useEffect(() => {
