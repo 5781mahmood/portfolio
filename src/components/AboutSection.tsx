@@ -19,7 +19,7 @@ const experience: ExperienceItem[] = [
   {
     role: "Backend Developer & Curriculum Developer",
     company: "My Code Club",
-    period: "Jul – Nov 2026",
+    period: "Jul – Oct 2026",
     detail:
       "Owned the backend of an existing registration platform: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API.",
   },
@@ -29,7 +29,7 @@ const experience: ExperienceItem[] = [
   { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 – Jun 2026" },
   { role: "Manufacturing Operator", company: "Mondelēz International", period: "May – Aug 2024" },
   { role: "Coding Instructor", company: "Code Ninjas", period: "Jul – Aug 2023" },
-  { role: "Senior Mentor", company: "Cyber-Seniors", period: "Jun 2020 – Jun 2023" },
+  { role: "Technical Mentor", company: "Cyber-Seniors", period: "Jun 2020 – Jun 2023" },
   { role: "Coding Tutor", company: "My Code Club", period: "May – Aug 2022" },
 ];
 
@@ -56,7 +56,7 @@ const AboutSection = () => {
             12–16 month co-op starting May 2027.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            At My Code Club (Jul – Nov 2026) I joined an existing platform and owned
+            At My Code Club (Jul – Oct 2026) I joined an existing platform and owned
             the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email
             API. Built with Cursor; I owned requirements, review, testing and
             deployment. The platform has 100+ registered families and a newsletter
