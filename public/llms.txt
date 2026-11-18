@@ -7,7 +7,7 @@ Mahmood Sultan is a student developer based in Toronto. This portfolio showcases
 ## Pages
 
 - [Home](/): Hero introduction to Mahmood Sultan.
-- [About](/#about): Background, education, and experience, including My Code Club (Backend Developer & Curriculum Developer, Jul–Nov 2026) and Agrivanna (Web App QA Tester, Oct–Nov 2026).
+- [About](/#about): Background, education, and experience, including My Code Club (Backend Developer & Curriculum Developer, Jul–Oct 2026) and Agrivanna (Web App QA Tester, Oct–Nov 2026).
 - [Selected work](/#work): Case studies for My Code Club, UTM Makerspace Access (CCT204, 4-person team), and Turtle Island Charity, plus shorter projects including OurCal, Toronto Firearm Analysis (CCT416), the Calorie Tracking App, and 100-Level Platformer Game.
 - [UTM Makerspace Access](/projects/utm-makerspace): 4-person UX research study on why immigrant ICCIT students didn't use the UTM Library Makerspace.
 - [Contact](/#contact): Get in touch with Mahmood.
