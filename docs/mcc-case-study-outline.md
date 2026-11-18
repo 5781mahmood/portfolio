@@ -9,7 +9,7 @@ No real family names, emails, or identifying data in any screenshot.
 - Title: My Code Club
 - Role: Backend Developer & Curriculum Developer
 - Type: Contract, part-time
-- Dates: Jul 2026 – Nov 2026 (ended)
+- Dates: Jul 2026 – Oct 2026 (ended)
 - Place: Mississauga, Ontario
 - Live site: https://www.mycodeclub.io/
 - Stack: Node.js Cloud Functions, Firebase Firestore, Firebase Authentication, Stripe (Checkout Sessions and webhooks), PHP email API, HTML, Tailwind CSS, JavaScript
