@@ -19,7 +19,7 @@ type OtherProject = {
 const caseStudies: CaseStudy[] = [
   {
     title: "My Code Club",
-    meta: "Backend Developer & Curriculum Developer · Jul–Nov 2026",
+    meta: "Backend Developer & Curriculum Developer · Jul–Oct 2026",
     description:
       "Joined an existing parent and student registration platform and owned the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API. Built with Cursor; I owned requirements, review, testing and deployment. 100+ registered families.",
   },
