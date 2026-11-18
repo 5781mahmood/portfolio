@@ -17,10 +17,9 @@ Live at [www.mahmoodsultan.com](https://www.mahmoodsultan.com).
 Requires Node 18+.
 
 ```sh
-git clone https://github.com/5781mahmood/portfolio-v2.git
-cd portfolio-v2
+git clone https://github.com/5781mahmood/portfolio.git
+cd portfolio
 npm install
-cp .env.example .env   # optional; no page currently reads these values
 npm run dev            # http://localhost:8080
 ```
 
