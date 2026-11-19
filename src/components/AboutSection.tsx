@@ -58,7 +58,7 @@ const AboutSection = () => {
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
             At My Code Club (Jul – Oct 2026) I joined an existing platform and owned
             the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email
-            API. Built with Cursor; I owned requirements, review, testing and
+            API, from requirements through testing and
             deployment. The platform has 100+ registered families and a newsletter
             reach of about 500. After that I did QA testing on Agrivanna's web app.
           </p>
