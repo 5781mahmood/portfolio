@@ -51,7 +51,7 @@ const AboutSection = () => {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-foreground/85 md:text-lg">
             BA at the University of Toronto Mississauga in Technology, Coding &amp;
-            Society (TCS) and Culture, Communication, Information &amp; Technology
+            Society (TCS) and Communication, Culture, Information &amp; Technology
             (CCIT), with a Statistics minor. Expected graduation Apr 2029. Seeking a
             12-16 month co-op starting May 2027.
           </p>

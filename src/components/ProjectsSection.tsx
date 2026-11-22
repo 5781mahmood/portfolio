@@ -43,7 +43,7 @@ const otherProjects: OtherProject[] = [
     title: "OurCal",
     meta: "React 19 · TypeScript · Vite · Supabase",
     description:
-      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 60+ automated tests (Vitest and Playwright) run in GitHub Actions.",
+      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 70+ automated tests (Vitest and Playwright) run in GitHub Actions.",
     links: [
       { label: "Live app", href: "https://ourcal-pi.vercel.app" },
       { label: "GitHub", href: "https://github.com/5781mahmood/OurCal" },
