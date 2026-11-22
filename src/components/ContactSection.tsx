@@ -1,17 +1,11 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
+
+const linkClass = "text-foreground underline underline-offset-2 hover:text-primary";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`);
-    const body = encodeURIComponent(`${formData.message}\n\nFrom: ${formData.email}`);
-    window.location.href = `mailto:5781mahmood@gmail.com?subject=${subject}&body=${body}`;
-  };
 
   return (
     <section id="contact" className="section-padding">
@@ -26,64 +20,31 @@ const ContactSection = () => {
             Let's talk
           </h2>
           <p className="mt-3 max-w-md text-base text-muted-foreground">
-            Seeking a 12–16 month co-op starting May 2027. Email{" "}
-            <a
-              href="mailto:5781mahmood@gmail.com"
-              className="text-foreground underline underline-offset-2 hover:text-primary"
-            >
+            Seeking a 12-16 month co-op starting May 2027. Email{" "}
+            <a href="mailto:5781mahmood@gmail.com" className={linkClass}>
               5781mahmood@gmail.com
+            </a>
+            , or find me on{" "}
+            <a
+              href="https://www.linkedin.com/in/mahmoodsultan5/"
+              target="_blank"
+              rel="noreferrer"
+              className={linkClass}
+            >
+              LinkedIn
             </a>{" "}
-            or use the form below.
+            and{" "}
+            <a
+              href="https://github.com/5781mahmood"
+              target="_blank"
+              rel="noreferrer"
+              className={linkClass}
+            >
+              GitHub
+            </a>
+            .
           </p>
         </motion.div>
-
-        <motion.form
-          initial={{ opacity: 0, y: 12 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.4, delay: 0.06 }}
-          onSubmit={handleSubmit}
-          className="mt-10 max-w-md space-y-4"
-        >
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-muted-foreground">Name</span>
-            <input
-              type="text"
-              required
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-muted-foreground">Email</span>
-            <input
-              type="email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1.5 block text-sm text-muted-foreground">Message</span>
-            <textarea
-              required
-              rows={5}
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full resize-y border border-border bg-background/80 px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
-            />
-          </label>
-          <button
-            type="submit"
-            className="bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Send message
-          </button>
-          <p className="text-xs text-muted-foreground">
-            Opens your default email app with this message pre-filled.
-          </p>
-        </motion.form>
       </div>
     </section>
   );

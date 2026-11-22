@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* Warm paper field + iron-oxide amber — technical, not flashy */
+    /* Warm paper background with an iron-oxide amber accent */
     --background: 36 28% 97%;
     --foreground: 24 18% 10%;
 
@@ -37,15 +37,6 @@
 
     --font-display: "Source Serif 4", "Times New Roman", serif;
     --font-body: "Source Sans 3", "Helvetica Neue", sans-serif;
-
-    --sidebar-background: 36 28% 97%;
-    --sidebar-foreground: 24 18% 10%;
-    --sidebar-primary: 22 78% 34%;
-    --sidebar-primary-foreground: 36 28% 97%;
-    --sidebar-accent: 34 16% 92%;
-    --sidebar-accent-foreground: 24 18% 10%;
-    --sidebar-border: 30 12% 84%;
-    --sidebar-ring: 22 78% 34%;
   }
 }
 

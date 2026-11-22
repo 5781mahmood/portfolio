@@ -5,9 +5,9 @@ import { ArrowLeft } from "lucide-react";
 import empathyMap from "@/assets/makerspace-empathy-map.png";
 import poster from "@/assets/makerspace-poster.png";
 
-const TITLE = "UTM Makerspace Access — UX Case Study | Mahmood Sultan";
+const TITLE = "UTM Makerspace Access - UX Case Study | Mahmood Sultan";
 const DESCRIPTION =
-  "CCT204 case study: a four-person team researching why immigrant ICCIT students at UTM avoid the Library Makerspace — interview, observation, reframe, and a research poster.";
+  "CCT204 case study: a four-person team researching why immigrant ICCIT students at UTM avoid the Library Makerspace. Interview, observation, reframe, and a research poster.";
 const URL = "https://www.mahmoodsultan.com/projects/utm-makerspace";
 const OG_IMAGE = "https://www.mahmoodsultan.com/og-image.png";
 
@@ -85,7 +85,7 @@ const useDocumentMeta = () => {
     ld.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: "UTM Makerspace Access — UX Case Study",
+      headline: "UTM Makerspace Access - UX Case Study",
       description: DESCRIPTION,
       author: { "@type": "Person", name: "Mahmood Sultan" },
       mainEntityOfPage: URL,
@@ -194,7 +194,7 @@ const MakerspaceCaseStudy = () => {
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px w-8 bg-primary" aria-hidden />
             <p className="text-sm text-muted-foreground">
-              CCT204 · UX research · Sep–Nov 2025
+              CCT204 · UX research · Sep - Nov 2025
             </p>
           </div>
           <h1 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl md:text-5xl md:leading-[1.1]">
@@ -223,7 +223,7 @@ const MakerspaceCaseStudy = () => {
         </div>
 
         <div className="max-w-3xl">
-          <Section eyebrow="01 — Problem" title="A space that existed, and students who didn't enter it">
+          <Section eyebrow="01 - Problem" title="A space that existed, and students who didn't enter it">
             <p>
               The UTM Library Makerspace is open to students across campus, including
               ICCIT students in programs like CCIT and TCS. In practice, many second- and
@@ -238,7 +238,7 @@ const MakerspaceCaseStudy = () => {
             </p>
           </Section>
 
-          <Section eyebrow="02 — Research" title="Interview and observation">
+          <Section eyebrow="02 - Research" title="Interview and observation">
             <p>
               I personally ran a semi-structured interview with a second-year student
               about how they approached campus spaces, booking, and group work. The rest
@@ -263,13 +263,13 @@ const MakerspaceCaseStudy = () => {
         />
 
         <div className="max-w-3xl">
-          <Section eyebrow="03 — The reframe" title="Confidence, information, and social connection">
+          <Section eyebrow="03 - The reframe" title="Confidence, information, and social connection">
             <p>
               The research reframed the problem. Students were not avoiding the makerspace
               because they did not care about making. They lacked confidence, clear
               information, and social connections that would make participation feel
-              legitimate. Feeling like an outsider — unsure what was allowed, unsure who
-              to ask, unsure whether the space was "for people like me" — mattered more
+              legitimate. Feeling like an outsider (unsure what was allowed, unsure who
+              to ask, unsure whether the space was "for people like me") mattered more
               than machine availability.
             </p>
             <p>
@@ -279,12 +279,12 @@ const MakerspaceCaseStudy = () => {
             </p>
           </Section>
 
-          <Section eyebrow="04 — Proposed direction" title="Workshops, clearer onboarding, shared interests">
+          <Section eyebrow="04 - Proposed direction" title="Workshops, clearer onboarding, shared interests">
             <p>
               The team's proposed direction followed the reframe: structured workshops so
               students had a reason and a cohort for a first visit; clearer onboarding so
               booking and basic use were not guesswork; and a way for students with shared
-              interests — including ICCIT-relevant skills like video and photo work — to
+              interests, including ICCIT-relevant skills like video and photo work, to
               find each other instead of walking into a room of strangers.
             </p>
             <p>
@@ -293,12 +293,12 @@ const MakerspaceCaseStudy = () => {
             </p>
           </Section>
 
-          <Section eyebrow="05 — Poster / outcome" title="A 36×48″ research poster">
+          <Section eyebrow="05 - Poster / outcome" title="A 36×48″ research poster">
             <p>
               The project culminated in a 36×48″ research poster that documented the
               problem, methods, reframe, and proposed direction for the course. The poster
               was the deliverable that held the argument together: access is not only about
-              open hours and machines — it is about whether students believe they belong
+              open hours and machines. It is about whether students believe they belong
               there.
             </p>
           </Section>

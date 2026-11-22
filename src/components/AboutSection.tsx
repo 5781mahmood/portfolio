@@ -12,25 +12,25 @@ const experience: ExperienceItem[] = [
   {
     role: "Web App QA Tester",
     company: "Agrivanna",
-    period: "Oct – Nov 2026",
+    period: "Oct - Nov 2026",
     detail:
       "Filed 38 GitHub issues; 24 fixes confirmed in my retests. Wrote 5 Playwright smoke tests and ran an accessibility and Lighthouse audit.",
   },
   {
     role: "Backend Developer & Curriculum Developer",
     company: "My Code Club",
-    period: "Jul – Oct 2026",
+    period: "Jul - Oct 2026",
     detail:
       "Owned the backend of an existing registration platform: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API.",
   },
   { role: "Operations & Customer Experience Lead", company: "IlluminEd Tutoring", period: "Aug 2026" },
-  { role: "Amazon Operational Strategy & People Analytics Externship", company: "Extern", period: "Jun – Aug 2026" },
-  { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "May – Aug 2026" },
-  { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 – Jun 2026" },
-  { role: "Manufacturing Operator", company: "Mondelēz International", period: "May – Aug 2024" },
-  { role: "Coding Instructor", company: "Code Ninjas", period: "Jul – Aug 2023" },
-  { role: "Technical Mentor", company: "Cyber-Seniors", period: "Jun 2020 – Jun 2023" },
-  { role: "Coding Tutor", company: "My Code Club", period: "May – Aug 2022" },
+  { role: "Amazon Operational Strategy & People Analytics Externship", company: "Extern", period: "Jun - Aug 2026" },
+  { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "May - Aug 2026" },
+  { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 - Jun 2026" },
+  { role: "Manufacturing Operator", company: "Mondelēz International", period: "May - Aug 2024" },
+  { role: "Coding Instructor", company: "Code Ninjas", period: "May - Aug 2023" },
+  { role: "Technical Mentor", company: "Cyber-Seniors", period: "Jun 2020 - Jun 2023" },
+  { role: "Coding Tutor", company: "My Code Club", period: "May - Aug 2022" },
 ];
 
 const AboutSection = () => {
@@ -53,10 +53,10 @@ const AboutSection = () => {
             BA at the University of Toronto Mississauga in Technology, Coding &amp;
             Society (TCS) and Culture, Communication, Information &amp; Technology
             (CCIT), with a Statistics minor. Expected graduation Apr 2029. Seeking a
-            12–16 month co-op starting May 2027.
+            12-16 month co-op starting May 2027.
           </p>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            At My Code Club (Jul – Oct 2026) I joined an existing platform and owned
+            At My Code Club (Jul - Oct 2026) I joined an existing platform and owned
             the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email
             API, from requirements through testing and
             deployment. The platform has 100+ registered families and a newsletter
@@ -66,7 +66,7 @@ const AboutSection = () => {
             I've also built OurCal, a tested React and Supabase app used by 40+
             people, done client web implementation for Turtle Island Charity, and
             analyzed Toronto firearm incident data with Python and DuckDB SQL. I like
-            projects where I can move between the technical and the practical —
+            projects where I can move between the technical and the practical:
             understanding both how something is built and why it matters to the person
             using it.
           </p>

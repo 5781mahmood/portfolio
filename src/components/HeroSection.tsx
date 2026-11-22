@@ -36,7 +36,7 @@ const HeroSection = () => {
         >
           Backend for a live registration and payments platform, QA testing on
           Agrivanna's web app, and OurCal, a tested React app used by 40+ people.
-          Third-year at UTM, seeking a 12–16 month co-op from May 2027.
+          Third-year at UTM, seeking a 12-16 month co-op from May 2027.
         </motion.p>
 
         <motion.div

@@ -7,10 +7,11 @@ Live at [www.mahmoodsultan.com](https://www.mahmoodsultan.com).
 ## Stack
 
 - Vite + React 18 + TypeScript
-- Tailwind CSS and a few shadcn/ui primitives
+- Tailwind CSS
 - React Router for client-side routes
-- Framer Motion for small entrance animations
-- Deployed on Vercel from `main`; `vercel.json` sends every route to `index.html` so deep links work on refresh
+- Framer Motion for small entrance animations, Lenis for smooth scrolling
+- Vitest and Testing Library for tests
+- Deployed on Vercel from `main`; `vercel.json` holds the redirects and sends every other route to `index.html` so deep links work on refresh
 
 ## Run locally
 
@@ -34,9 +35,13 @@ npm test
 
 ## Structure
 
-- `src/pages/` — home page, the Makerspace case study, blog guides, 404
-- `src/components/` — home page sections (hero, work, about, contact, footer)
-- `public/` — favicon, Open Graph image, `robots.txt`, `sitemap.xml`, `llms.txt`
+- `src/pages/`: home page, the Makerspace case study, 404
+- `src/components/`: home page sections (navbar, hero, about, work, contact, footer)
+- `src/hooks/useLenis.ts`: smooth scrolling and in-page anchor links
+- `src/assets/`: Makerspace case study images
+- `src/test/`: route tests and jsdom setup
+- `public/`: favicons, Open Graph image, `robots.txt`, `sitemap.xml`
+- `scripts/og-image.html`: source for the Open Graph image
 
 ## Open Graph image
 

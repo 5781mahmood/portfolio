@@ -19,20 +19,20 @@ type OtherProject = {
 const caseStudies: CaseStudy[] = [
   {
     title: "My Code Club",
-    meta: "Backend Developer & Curriculum Developer · Jul–Oct 2026",
+    meta: "Backend Developer & Curriculum Developer · Jul - Oct 2026",
     description:
       "Joined an existing parent and student registration platform and owned the backend: Node.js Cloud Functions, Firestore, Stripe, and a PHP email API, from requirements through testing and deployment. 100+ registered families.",
   },
   {
     title: "UTM Makerspace Access",
-    meta: "CCT204 · 4-person team UX research · Sep–Nov 2025",
+    meta: "CCT204 · 4-person team UX research · Sep - Nov 2025",
     description:
-      "Researched why immigrant ICCIT students at UTM avoided the Library Makerspace. Interview and observation reframed the barrier as confidence, information, and belonging — not disinterest.",
+      "Researched why immigrant ICCIT students at UTM avoided the Library Makerspace. Interview and observation reframed the barrier as confidence, information, and belonging, not disinterest.",
     href: "/projects/utm-makerspace",
   },
   {
     title: "Turtle Island Charity",
-    meta: "CCT341 team project · May–Aug 2026",
+    meta: "CCT341 team project · May - Aug 2026",
     description:
       "Four-person consulting team. Owned the client Services page in Wix and contributed to the homepage gallery. Client site link pending team approval.",
   },
@@ -43,7 +43,7 @@ const otherProjects: OtherProject[] = [
     title: "OurCal",
     meta: "React 19 · TypeScript · Vite · Supabase",
     description:
-      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 52 automated tests (12 Vitest + 40 Playwright) run in GitHub Actions.",
+      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 60+ automated tests (Vitest and Playwright) run in GitHub Actions.",
     links: [
       { label: "Live app", href: "https://ourcal-pi.vercel.app" },
       { label: "GitHub", href: "https://github.com/5781mahmood/OurCal" },
@@ -51,18 +51,12 @@ const otherProjects: OtherProject[] = [
   },
   {
     title: "Toronto Firearm Analysis",
-    meta: "CCT416 · Python, Pandas, DuckDB SQL · May–Jun 2026",
+    meta: "CCT416 · Python, Pandas, DuckDB SQL · May - Jun 2026",
     description:
       "Toronto Police open data: do the neighbourhoods with the most firearm incidents also carry the most harm? Cleaned the data in Pandas, cross-checked results in DuckDB SQL, and built visualizations for a report and presentation.",
     links: [
       { label: "GitHub", href: "https://github.com/5781mahmood/cct416-firearm-analysis" },
     ],
-  },
-  {
-    title: "Calorie Tracking App",
-    meta: "Python Desktop Application · 2024–25",
-    description:
-      "Desktop app for logging meals, categorizing food, calculating daily totals, and saving progress across sessions.",
   },
   {
     title: "100-Level Platformer",
@@ -89,8 +83,7 @@ const ProjectsSection = () => {
             Case studies
           </h2>
           <p className="mt-3 max-w-xl text-base text-muted-foreground">
-            Three projects that show research, shipping, and client work. The makerspace
-            write-up is live; MCC and Turtle Island are next.
+            Research, backend and client work.
           </p>
         </motion.div>
 
@@ -115,11 +108,7 @@ const ProjectsSection = () => {
                     <span className="mt-3 inline-block text-sm font-medium text-primary">
                       Read case study →
                     </span>
-                  ) : (
-                    <span className="mt-3 inline-block text-sm text-muted-foreground">
-                      Case study coming next
-                    </span>
-                  )}
+                  ) : null}
                 </div>
               </div>
             );
