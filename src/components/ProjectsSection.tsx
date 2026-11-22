@@ -34,7 +34,7 @@ const caseStudies: CaseStudy[] = [
     title: "Turtle Island Charity",
     meta: "CCT341 team project · May - Aug 2026",
     description:
-      "Four-person consulting team. Owned the client Services page in Wix and contributed to the homepage gallery. Client site link pending team approval.",
+      "Four-person consulting team. Owned the client Services page in Wix and contributed to the homepage gallery.",
   },
 ];
 
@@ -43,7 +43,7 @@ const otherProjects: OtherProject[] = [
     title: "OurCal",
     meta: "React 19 · TypeScript · Vite · Supabase",
     description:
-      "Local-first calorie and macro diary with optional Supabase sync, used by 40+ people. 70+ automated tests (Vitest and Playwright) run in GitHub Actions.",
+      "Calorie and macro diary with barcode lookup, offline install on phones, and optional Supabase sync with per-user security, used by 40+ people. 90+ automated tests (Vitest and Playwright) run in GitHub Actions.",
     links: [
       { label: "Live app", href: "https://ourcal-pi.vercel.app" },
       { label: "GitHub", href: "https://github.com/5781mahmood/OurCal" },
@@ -80,7 +80,7 @@ const ProjectsSection = () => {
         >
           <p className="eyebrow mb-3">Selected work</p>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-            Case studies
+            Recent work
           </h2>
           <p className="mt-3 max-w-xl text-base text-muted-foreground">
             Research, backend and client work.
