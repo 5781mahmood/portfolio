@@ -28,7 +28,7 @@ const experience: ExperienceItem[] = [
   { role: "Web Developer & UX (CCT341 client project)", company: "Turtle Island Charity", period: "May - Aug 2026" },
   { role: "Internal Relations Executive", company: "UTMMSA", period: "Jun 2025 - Jun 2026" },
   { role: "Manufacturing Operator", company: "Mondelēz International", period: "May - Aug 2024" },
-  { role: "Coding Instructor", company: "Code Ninjas", period: "May - Aug 2023" },
+  { role: "Coding Instructor", company: "Code Ninjas", period: "Jul - Aug 2023" },
   { role: "Technical Mentor", company: "Cyber-Seniors", period: "Jun 2020 - Jun 2023" },
   { role: "Coding Tutor", company: "My Code Club", period: "May - Aug 2022" },
 ];
