@@ -288,8 +288,8 @@ const MakerspaceCaseStudy = () => {
               find each other instead of walking into a room of strangers.
             </p>
             <p>
-              The point was not to add more equipment. It was to lower the social and
-              informational cost of showing up.
+              The goal was to lower the social and informational cost of showing up,
+              rather than adding more equipment.
             </p>
           </Section>
 
@@ -297,9 +297,8 @@ const MakerspaceCaseStudy = () => {
             <p>
               The project culminated in a 36×48″ research poster that documented the
               problem, methods, reframe, and proposed direction for the course. The poster
-              was the deliverable that held the argument together: access is not only about
-              open hours and machines. It is about whether students believe they belong
-              there.
+              was the deliverable that held the argument together: access depends on open
+              hours, machines, and whether students believe they belong there.
             </p>
           </Section>
         </div>
